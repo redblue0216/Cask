@@ -1,0 +1,2 @@
+[console_scripts]
+caskctl = cask.cli:cask

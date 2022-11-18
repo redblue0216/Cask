@@ -1,0 +1,66 @@
+from cask import create_cask_workspace,generate_cask_package,install_caskpkg,seriallize,deseriallize
+from cask.package import Caskpkg
+from cask.store import CaskStore
+
+
+### 创建cask工作空间，生成.cask隐藏文件夹
+# create_cask_workspace()
+
+
+### 生成cask包
+# generate_cask_package(caskpkg_name='testcask')
+
+
+### 安装cask包，生成.cask隐藏文件夹
+# install_caskpkg(caskpkg_file='testcask.caskpkg')
+
+
+### 添加object_file到.cask下
+# tmp_caskpkg = Caskpkg(objects=['logtest'],scripts=['install_script.sh'],configs=['test.yaml'])
+# tmp_caskpkg.commit()
+
+
+### 初始化cask存储对象               
+caskstore = CaskStore(endpoint='192.168.1.82:9000')
+
+
+### 临时函数
+def testfunc(a):
+    return a + 1
+
+### 序列化对象到文件
+seriallize(target_object=testfunc,filepath='testfunc.dill')
+
+
+### 序列化对象
+testfunc_bytes_obj = seriallize(target_object=testfunc)
+
+
+### 上传二进制对象
+result = caskstore.push_object(bucket_name='cask',object_name='testfunc',bytes_obj=testfunc_bytes_obj)
+print(result)
+
+
+### 获取二进制对象
+tmp_bytes_obj = caskstore.pull_object(bucket_name='cask',object_name='testfunc')
+
+
+### 反序列化对象
+testfunc_bytes_obj_a = deseriallize(target_object=tmp_bytes_obj)
+print(testfunc_bytes_obj_a(1))
+
+
+### 上传文件
+result = caskstore.push_file(bucket_name='cask',object_name='testfunc.dill',file_path='testfunc.dill')
+print(result)
+
+
+### 获取文件
+caskstore.pull_file(bucket_name='cask',object_name='testfunc.dill',file_path='testfunc.dill')
+
+
+### 反序列化对象
+testfunc_bytes_obj_aaa = deseriallize(filepath='testfunc.dill')
+print(testfunc_bytes_obj_aaa(2))
+
+

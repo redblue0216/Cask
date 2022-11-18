@@ -1,0 +1,2 @@
+include cask/doc/README.mdown
+graft cask/test

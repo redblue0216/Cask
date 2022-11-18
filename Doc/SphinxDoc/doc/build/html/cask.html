@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-cn" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>cask package &mdash; cask 0.1 文档</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/translations.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="prev" title="code" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> cask
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">code</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cask package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cask.cli">cask.cli module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cask.package">cask.package module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id4">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id5">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id6">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cask.store">cask.store module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id7">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id8">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id9">类说明</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#module-cask">Module contents</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id10">模块介绍</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id11">使用示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id12">类说明</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">cask</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="modules.html">code</a> &raquo;</li>
+      <li>cask package</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/cask.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="cask-package">
+<h1>cask package<a class="headerlink" href="#cask-package" title="永久链接至标题">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="永久链接至标题">¶</a></h2>
+</section>
+<section id="module-cask.cli">
+<span id="cask-cli-module"></span><h2>cask.cli module<a class="headerlink" href="#module-cask.cli" title="永久链接至标题">¶</a></h2>
+<section id="id1">
+<h3>模块介绍<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>这是一个cask常用命令行接口类</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）click</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）cask程序管理</p>
+</div></blockquote>
+</section>
+<section id="id2">
+<h3>使用示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id3">
+<h3>类说明<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+</section>
+</section>
+<section id="module-cask.package">
+<span id="cask-package-module"></span><h2>cask.package module<a class="headerlink" href="#module-cask.package" title="永久链接至标题">¶</a></h2>
+<section id="id4">
+<h3>模块介绍<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<p>这是一个cask配置分发包类，主要功能提供任意工程的打包、部署和版本管理。</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）tar压缩包管理</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）提供任意工程的打包、部署和版本管理</p>
+</div></blockquote>
+</section>
+<section id="id5">
+<h3>使用示例<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id6">
+<h3>类说明<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="cask.package.Caskpkg">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cask.package.</span></span><span class="sig-name descname"><span class="pre">Caskpkg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objects</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">scripts</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.package.Caskpkg" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个cask配置分发包类，主要功能提供任意工程的打包、部署和版本管理。</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.package.Caskpkg.add_config">
+<span class="sig-name descname"><span class="pre">add_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'copy_and_pack'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.package.Caskpkg.add_config" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加配置的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>config_file (str): 配置文件
+mode (str): 包括两种模式，move_and_pack打包并删除原有文件，copy_and_pack打包并保留原有文件</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.package.Caskpkg.add_object">
+<span class="sig-name descname"><span class="pre">add_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">object_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'copy_and_pack'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.package.Caskpkg.add_object" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>object_file (str): 对象文件
+mode (str): 包括两种模式，move_and_pack打包并删除原有文件，copy_and_pack打包并保留原有文件</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.package.Caskpkg.add_script">
+<span class="sig-name descname"><span class="pre">add_script</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">script_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'copy_and_pack'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.package.Caskpkg.add_script" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个添加脚本的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>script_file (str): 脚本文件
+mode (str): 包括两种模式，move_and_pack打包并删除原有文件，copy_and_pack打包并保留原有文件</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.package.Caskpkg.commit">
+<span class="sig-name descname"><span class="pre">commit</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cask.package.Caskpkg.commit" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个提交实例中所有加载的对象文件、脚本文件和配置文件</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-cask.store">
+<span id="cask-store-module"></span><h2>cask.store module<a class="headerlink" href="#module-cask.store" title="永久链接至标题">¶</a></h2>
+<section id="id7">
+<h3>模块介绍<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>这是一个cask存储管理类，主要功能管理cask远端存储，主要技术property动态属性和MinIO</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）MinIO</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）远端存储管理</p>
+</div></blockquote>
+</section>
+<section id="id8">
+<h3>使用示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id9">
+<h3>类说明<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<dl class="py class">
+<dt class="sig sig-object py" id="cask.store.CaskStore">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">cask.store.</span></span><span class="sig-name descname"><span class="pre">CaskStore</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">endpoint</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">access_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'minioadmin'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secret_key</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'minioadmin'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">secure</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore" title="永久链接至目标">¶</a></dt>
+<dd><p>基类：<code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>类介绍：</p>
+<blockquote>
+<div><p>这是一个cask存储管理类，主要功能管理cask远端存储，主要技术property动态属性和MinIO</p>
+</div></blockquote>
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.list_objects">
+<span class="sig-name descname"><span class="pre">list_objects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.list_objects" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个列举出远端存储的对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.make_bucket">
+<span class="sig-name descname"><span class="pre">make_bucket</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.make_bucket" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个创建桶名称的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>bucket_name (str): 桶名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.pull_file">
+<span class="sig-name descname"><span class="pre">pull_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.pull_file" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个从远端拉文件的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>bucket_name (str): 对象存储中桶的名称
+object_name (str): 二进制数据对象名称
+file_path (str): 文件名称</p>
+</dd>
+<dt>返回：</dt><dd><p>bytes_obj (object): 二进制对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.pull_object">
+<span class="sig-name descname"><span class="pre">pull_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.pull_object" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个从远端拉对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>bucket_name (str): 对象存储中桶的名称
+object_name (str): 二进制数据对象名称</p>
+</dd>
+<dt>返回：</dt><dd><p>bytes_obj (object): 二进制数据对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.push" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个向远端推送的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>无</p>
+</dd>
+<dt>返回：</dt><dd><p>无</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.push_file">
+<span class="sig-name descname"><span class="pre">push_file</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.push_file" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个上传文件的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>bucket_name (str): 对象存储中桶的名称
+object_name (str): 二进制数据对象名称
+file_path (str): 文件名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="cask.store.CaskStore.push_object">
+<span class="sig-name descname"><span class="pre">push_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bucket_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">object_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bytes_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.store.CaskStore.push_object" title="永久链接至目标">¶</a></dt>
+<dd><p>方法功能：</p>
+<blockquote>
+<div><p>定义一个向远端推送对象的方法</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>bucket_name (str): 对象存储中桶的名称
+object_name (str): 二进制数据对象名称
+bytes_obj (object): 二进制对象</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+<section id="module-cask">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-cask" title="永久链接至标题">¶</a></h2>
+<section id="id10">
+<h3>模块介绍<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<p>这是一个python包初始进入工作栈，主要功能提供基础操作函数，主要技术__all__</p>
+<p>设计模式：</p>
+<blockquote>
+<div><p>（1）  无</p>
+</div></blockquote>
+<p>关键点：</p>
+<blockquote>
+<div><p>（1）__all__</p>
+</div></blockquote>
+<p>主要功能：</p>
+<blockquote>
+<div><p>（1）基础操作函数集合</p>
+</div></blockquote>
+</section>
+<section id="id11">
+<h3>使用示例<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+</section>
+<section id="id12">
+<h3>类说明<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<dl class="py function">
+<dt class="sig sig-object py" id="cask.deseriallize">
+<span class="sig-prename descclassname"><span class="pre">cask.</span></span><span class="sig-name descname"><span class="pre">deseriallize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_object</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.deseriallize" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个反序列化对象的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>target_object (object): 具体python对象
+filepath (str): 反序列化文件路径</p>
+</dd>
+<dt>返回：</dt><dd><p>normal_object (object): 反序列化后对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cask.generate_cask_package">
+<span class="sig-prename descclassname"><span class="pre">cask.</span></span><span class="sig-name descname"><span class="pre">generate_cask_package</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caskpkg_name</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.generate_cask_package" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个生成cask压缩包的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>caskpkg_name (str): cask压缩包名称</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cask.install_caskpkg">
+<span class="sig-prename descclassname"><span class="pre">cask.</span></span><span class="sig-name descname"><span class="pre">install_caskpkg</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">caskpkg_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.install_caskpkg" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个安装cask压缩包的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>caskpkg_file (str): cask压缩包文件</p>
+</dd>
+<dt>返回：</dt><dd><p>result (str): 运行结果信息</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="cask.seriallize">
+<span class="sig-prename descclassname"><span class="pre">cask.</span></span><span class="sig-name descname"><span class="pre">seriallize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">target_object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">filepath</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cask.seriallize" title="永久链接至目标">¶</a></dt>
+<dd><p>函数功能：</p>
+<blockquote>
+<div><p>定义一个序列化对象的函数</p>
+</div></blockquote>
+<dl class="simple">
+<dt>参数：</dt><dd><p>target_object (object): 具体python对象
+filepath (str): 序列化文件路径</p>
+</dd>
+<dt>返回：</dt><dd><p>dill_object (object): 序列化后对象</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="code" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2022, shihua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

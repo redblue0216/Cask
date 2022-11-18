@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cask
+Version: 0.1
+Summary: Cash is a storage management tool, including project packaging and remote storage.
+Author: shihua
+Author-email: hua.shi@meritech-data.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.9.12
+
+UNKNOWN
+
